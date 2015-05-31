@@ -1,0 +1,20 @@
+#home {
+  text-align: center;
+
+  #bg {
+    position: fixed;
+    top: 52px;
+    left: 0;
+    height: 100vh;
+    z-index: -1;
+    background-image: url('landing.png');
+    width: 100vw;
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+
+  .tagline {
+    margin-top: 40vh;
+    color: $color-white;
+  }
+}
