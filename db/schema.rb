@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150531163807) do
+ActiveRecord::Schema.define(version: 20150531180925) do
 
   create_table "products", force: :cascade do |t|
     t.string   "name"
@@ -21,6 +21,10 @@ ActiveRecord::Schema.define(version: 20150531163807) do
     t.string   "category"
     t.integer  "cylinder"
     t.string   "engine"
+    t.string   "color1"
+    t.string   "color2"
+    t.string   "color3"
+    t.string   "color4"
   end
 
 end

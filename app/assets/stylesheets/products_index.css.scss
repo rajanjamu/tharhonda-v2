@@ -53,15 +53,19 @@
           height: 20px;
           border: $border;
         }
-        .color-blue {
-          background: blue;
-        }
-        .color-white {
-          background: white;
-        }
-        .color-red {
-          background: red;
-        }
+        .color-gray {background: $color-product-gray;}
+        .color-white {background: $color-product-white;}
+        .color-red {background: $color-product-red;}
+        .color-orange {background: $color-product-orange;}
+        .color-green {background: $color-product-green;}
+        .color-black {background: $color-product-black;}
+        .color-yellow {background: $color-product-yellow;}
+        .color-brown {background: $color-product-brown;}
+        .color-blue {background: $color-product-blue;}
+        .color-silver {background: $color-product-silver;}
+        .color-purple {background: $color-product-purple;}
+        .color-gold {background: $color-product-gold;}
+        .color-none {display: none;}
       }
 
       .product-specs {

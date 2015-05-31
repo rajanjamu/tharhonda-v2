@@ -15,6 +15,9 @@
           <div class="checkbox">
             <label><input type="checkbox" value="">Dream Series</label>
           </div>
+          <div class="checkbox">
+            <label><input type="checkbox" value="">Super Bikes</label>
+          </div>
         </div>
       </div>
 
@@ -34,7 +37,13 @@
             <label><input type="checkbox" value="">150 cc</label>
           </div>
           <div class="checkbox">
+            <label><input type="checkbox" value="">160 cc</label>
+          </div>
+          <div class="checkbox">
             <label><input type="checkbox" value="">250 cc</label>
+          </div>
+          <div class="checkbox">
+            <label><input type="checkbox" value="">1000 cc and above</label>
           </div>
         </div>
       </div>
@@ -58,49 +67,34 @@
         Products
       </h3>
 
+
+
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-3 col-sm-4 col-xs-6 nopadding">
-            <div class="product-container">
-              <%= cl_image_tag("cbshine.jpg") %>
-              <div class="product-description">
-                <h5 class="product-name">CB Shine</h5>
-                <div class="product-color">
-                  <div class="box color-blue"></div>
-                  <div class="box color-white"></div>
-                  <div class="box color-red"></div>
+          <% @products.each do |product| %>
+            <div class="col-md-3 col-sm-4 col-xs-6 nopadding">
+              <div class="product-container">
+                <%= cl_image_tag(product.picture) %>
+                <div class="product-description">
+                  <h5 class="product-name"><%= product.name %></h5>
+                  <div class="product-color">
+                    <div class="box color-<%= product.color1? ? product.color1 : "none" %>"></div>
+                    <div class="box color-<%= product.color2? ? product.color2 : "none" %>"></div>
+                    <div class="box color-<%= product.color3? ? product.color3 : "none" %>"></div>
+                    <div class="box color-<%= product.color4? ? product.color4 : "none" %>"></div>
+                  </div>
+                  <div class="product-specs">
+                    <ul>
+                      <li><%= product.category %></li>
+                      <li><%= product.cylinder %> cc</li>
+                      <li><%= product.engine %>-cooled</li>
+                    </ul>
+                  </div>
                 </div>
-                <div class="product-specs">
-                  <ul>
-                    <li>Motorcycle</li>
-                    <li>125 cc</li>
-                    <li>Air-cooled</li>
-                  </ul>
-                </div>
+                <button type="button" class="btn btn-primary">Learn More</button>
               </div>
-              <button type="button" class="btn btn-primary">Learn More</button>
             </div>
-          </div>
-          <div class="col-md-3 col-sm-4 col-xs-6 nopadding">
-            <div class="product-container">
-              <%= cl_image_tag("cbtrigger.jpg") %>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-4 col-xs-6 nopadding">
-            <div class="product-container">
-              <%= cl_image_tag("cbfstunner.jpg") %>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-4 col-xs-6 nopadding">
-            <div class="product-container">
-              <%= cl_image_tag("cbr150r.jpg") %>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-4 col-xs-6 nopadding">
-            <div class="product-container">
-              <%= cl_image_tag("cbtwister.jpg") %>
-            </div>
-          </div>
+          <% end %>
         </div>
       </div>
 
