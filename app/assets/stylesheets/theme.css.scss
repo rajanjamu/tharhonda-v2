@@ -1,0 +1,19 @@
+$font-stack: 'Open Sans', sans-serif;
+
+$color-honda: #cc0001;
+$color-pomegranate: #c0392b;
+$color-alizarin: #e74c3c;
+$color-clouds: #ecf0f1;
+$color-asbestos: #7f8c8d;
+$color-black: #000;
+$color-white: #fff;
+
+$color-header: $color-honda;
+$color-header-button: darken($color-header, 10%);
+$color-header-text: $color-clouds;
+
+$color-panel-title-text: $color-white;
+$color-panel-title-bg: #52565a;
+
+$color-page-title-text: $color-black;
+$color-page-title-bg: $color-clouds;
