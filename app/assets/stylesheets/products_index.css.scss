@@ -1,4 +1,5 @@
 #prod-index {
+
   .panel {
     border: 0;
     margin: 0;
@@ -6,24 +7,80 @@
       margin: 0;
       padding-top: 17px;
       padding-bottom: 17px;
+      padding-left: 30px;
       border: 0;
       border-radius: 0;
       background-color: $color-panel-title-bg;
       color: $color-panel-title-text;
     }
     .panel-body {
+      padding-left: 30px;
       background-color: #f1f1f1;
     }
   }
 
   .page-title {
     margin: 0;
-    padding-top: 10.5px;
-    padding-bottom: 10.5px;
+    padding-top: 11px;
+    padding-bottom: 11px;
     padding-left: 15px;
-    border: rgb(218,218,218) 1px solid;
     border-radius: 0;
     background-color: $color-page-title-bg;
     color: $color-page-title-text;
+  }
+
+  .product-container {
+    border-top: $border;
+    border-left: $border;
+    border-bottom: $border;
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+
+    .product-description {
+      .product-name {
+        padding: 15px 5px 5px 23px;
+        font-weight: bold;
+      }
+
+      .product-color {
+        padding: 5px 5px 10px 23px;
+        .box {
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          border: $border;
+        }
+        .color-blue {
+          background: blue;
+        }
+        .color-white {
+          background: white;
+        }
+        .color-red {
+          background: red;
+        }
+      }
+
+      .product-specs {
+        padding-top: 5px;
+        padding-bottom: 60px;
+        font-size: 0.9em;
+      }
+    }
+
+    button {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      width: 90%;
+      height: 40px;
+      border-radius: 0;
+      border: 0;
+      background: $button-bg;
+      transform: translateX(-50%);
+    }
   }
 }

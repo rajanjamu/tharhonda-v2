@@ -1,7 +1,7 @@
 <div id="prod-index">
 
   <div class="row">
-    <div class="col-sm-3 nopadding">
+    <div class="col-sm-3 hidden-xs nopadding">
 
       <div class="panel">
         <h5 class="panel-heading">Category</h5>
@@ -40,13 +40,13 @@
       </div>
 
       <div class="panel">
-        <h5 class="panel-heading">Cooling</h5>
+        <h5 class="panel-heading">Engine Type</h5>
         <div class="panel-body">
           <div class="checkbox">
-            <label><input type="checkbox" value="">Air-cooled</label>
+            <label><input type="checkbox" value="">Air-cooled, 4 stroke</label>
           </div>
           <div class="checkbox">
-            <label><input type="checkbox" value="">Liquid-cooled</label>
+            <label><input type="checkbox" value="">Liquid-cooled, 4 stroke</label>
           </div>
         </div>
       </div>
@@ -60,14 +60,46 @@
 
       <div class="container-fluid">
         <div class="row">
-          <div class="col-sm-4">
-            Rajan
+          <div class="col-md-3 col-sm-4 col-xs-6 nopadding">
+            <div class="product-container">
+              <%= image_tag("cbshine.jpg") %>
+              <div class="product-description">
+                <h5 class="product-name">CB Shine</h5>
+                <div class="product-color">
+                  <div class="box color-blue"></div>
+                  <div class="box color-white"></div>
+                  <div class="box color-red"></div>
+                </div>
+                <div class="product-specs">
+                  <ul>
+                    <li>Motorcycle</li>
+                    <li>125 cc</li>
+                    <li>Air-cooled</li>
+                  </ul>
+                </div>
+              </div>
+              <button type="button" class="btn btn-primary">Learn More</button>
+            </div>
           </div>
-          <div class="col-sm-4">
-            Rajan
+          <div class="col-md-3 col-sm-4 col-xs-6 nopadding">
+            <div class="product-container">
+              <%= image_tag("cbtrigger.jpg") %>
+            </div>
           </div>
-          <div class="col-sm-4">
-            Rajan
+          <div class="col-md-3 col-sm-4 col-xs-6 nopadding">
+            <div class="product-container">
+              <%= image_tag("cbfstunner.jpg") %>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-4 col-xs-6 nopadding">
+            <div class="product-container">
+              <%= image_tag("cbr150r.jpg") %>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-4 col-xs-6 nopadding">
+            <div class="product-container">
+              <%= image_tag("cbtwistter.jpg") %>
+            </div>
           </div>
         </div>
       </div>
