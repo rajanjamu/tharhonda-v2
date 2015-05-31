@@ -16,6 +16,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'simple_form'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
+gem 'carrierwave'
+gem 'cloudinary'
 
 # gem 'bcrypt', '~> 3.1.7'
 # gem 'unicorn'
