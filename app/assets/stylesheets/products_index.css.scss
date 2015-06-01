@@ -75,12 +75,13 @@
       }
     }
 
-    button {
+    .btn {
       position: absolute;
       bottom: 10px;
       left: 50%;
       width: 90%;
-      height: 40px;
+      padding-top: 10px;
+      padding-bottom: 10px; 
       border-radius: 0;
       border: 0;
       background: $button-bg;
