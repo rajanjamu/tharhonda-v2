@@ -40,9 +40,13 @@
     }
 
     .product-description {
-      .product-name {
-        padding: 15px 5px 5px 23px;
-        font-weight: bold;
+      a {
+        text-decoration: none;
+        color: $color-black;
+        .product-name {
+          padding: 15px 5px 5px 23px;
+          font-weight: bold;
+        }
       }
 
       .product-color {
@@ -51,6 +55,7 @@
           display: inline-block;
           width: 20px;
           height: 20px;
+          border-radius: 100%;
           border: $border;
         }
         .color-gray {background: $color-product-gray;}

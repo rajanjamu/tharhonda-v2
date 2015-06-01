@@ -76,7 +76,7 @@
               <div class="product-container">
                 <%= link_to cl_image_tag(product.picture), product %>
                 <div class="product-description">
-                  <h5 class="product-name"><%= product.name %></h5>
+                  <%= link_to content_tag(:h5, product.name, class: "product-name"), product %>
                   <div class="product-color">
                     <div class="box color-<%= product.color1? ? product.color1 : "none" %>"></div>
                     <div class="box color-<%= product.color2? ? product.color2 : "none" %>"></div>
