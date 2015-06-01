@@ -4,10 +4,10 @@
       <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
-          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"><%= cl_image_tag(@product.thumb1) %></li>
-          <li data-target="#carousel-example-generic" data-slide-to="1"><%= cl_image_tag(@product.thumb2) %></li>
-          <li data-target="#carousel-example-generic" data-slide-to="2"><%= cl_image_tag(@product.thumb3) %></li>
-          <li data-target="#carousel-example-generic" data-slide-to="2"><%= cl_image_tag(@product.thumb4) %></li>
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active <%= @product.thumb2? ? "" : "nodisplay" %>"><%= cl_image_tag(@product.thumb1) %></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1" class="<%= @product.thumb2? ? "" : "nodisplay" %>"><%= cl_image_tag(@product.thumb2) %></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2" class="<%= @product.thumb3? ? "" : "nodisplay" %>"><%= cl_image_tag(@product.thumb3) %></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2" class="<%= @product.thumb4? ? "" : "nodisplay" %>"><%= cl_image_tag(@product.thumb4) %></li>
         </ol>
 
         <!-- Wrapper for slides -->
@@ -17,23 +17,27 @@
             <div class="carousel-caption">
             </div>
           </div>
-          <div class="item">
-            <%= cl_image_tag(@product.image2) %>
-            <div class="carousel-caption">
+          <% if @product.image2? %>
+            <div class="item">
+              <%= cl_image_tag(@product.image2) %>
+              <div class="carousel-caption">
+              </div>
             </div>
-          </div>
-          <div class="item">
-            <%= cl_image_tag(@product.image3) %>
-            <div class="carousel-caption">
-              Rajan
+          <% end %>
+          <% if @product.image3? %>
+            <div class="item">
+              <%= cl_image_tag(@product.image3) %>
+              <div class="carousel-caption">
+              </div>
             </div>
-          </div>
-          <div class="item">
-            <%= cl_image_tag(@product.image4) %>
-            <div class="carousel-caption">
-              Rajan
+          <% end %>
+          <% if @product.image4? %>
+            <div class="item">
+              <%= cl_image_tag(@product.image4) %>
+              <div class="carousel-caption">
+              </div>
             </div>
-          </div>
+          <% end %>
         </div>
 
         <!-- Controls -->
@@ -67,7 +71,26 @@
           </div>
           <div class="product-links">
             <ul>
-              <li><%= link_to content_tag(:span, "", class: "glyphicon glyphicon-list-alt") %></li>
+
+              <!-- Button trigger modal -->
+              <li><%= link_to content_tag(:span, "", class: "glyphicon glyphicon-list-alt"), "#myModal", data: {toggle: "modal"} %></li>
+
+              <!-- Modal -->
+              <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h4 class="modal-title" id="myModalLabel"><%= @product.name %> - Specification</h4>
+                    </div>
+                    <div class="modal-body">
+                      <%= cl_image_tag(@product.thumb3) %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              
               <li><%= link_to content_tag(:span, "", class: "glyphicon glyphicon-download-alt") %></li>
             </ul>
           </div>

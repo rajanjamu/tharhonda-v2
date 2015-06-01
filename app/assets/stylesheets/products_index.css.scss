@@ -86,6 +86,10 @@
       border: 0;
       background: $button-bg;
       transform: translateX(-50%);
+
+      &:hover {
+        background: darken($button-bg, 10%);
+      }
     }
   }
 }
