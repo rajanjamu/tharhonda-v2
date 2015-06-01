@@ -4,25 +4,32 @@
       <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
-          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"><%= image_tag src="cbr_black_icon.png" %></li>
-          <li data-target="#carousel-example-generic" data-slide-to="1"><%= image_tag src="cbr_red_icon.png" %></li>
-          <li data-target="#carousel-example-generic" data-slide-to="2"><%= image_tag src="cbr_white_icon.png" %></li>
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"><%= cl_image_tag(@product.thumb1) %></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"><%= cl_image_tag(@product.thumb2) %></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2"><%= cl_image_tag(@product.thumb3) %></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2"><%= cl_image_tag(@product.thumb4) %></li>
         </ol>
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
           <div class="item active">
-            <%= image_tag "cbr_black.png" %>
+            <%= cl_image_tag(@product.image1) %>
             <div class="carousel-caption">
             </div>
           </div>
           <div class="item">
-            <%= image_tag "cbr_red.png" %>
+            <%= cl_image_tag(@product.image2) %>
             <div class="carousel-caption">
             </div>
           </div>
           <div class="item">
-            <%= image_tag "cbr_white.png" %>
+            <%= cl_image_tag(@product.image3) %>
+            <div class="carousel-caption">
+              Rajan
+            </div>
+          </div>
+          <div class="item">
+            <%= cl_image_tag(@product.image4) %>
             <div class="carousel-caption">
               Rajan
             </div>
@@ -42,7 +49,31 @@
     </div>
 
     <div class="col-sm-4">
-      Rajan
+      <div class="product-container">
+        <div class="product-description">
+          <h2 class="product-name"><%= @product.name %></h2>
+          <div class="product-color">
+            <div class="box color-<%= @product.color1? ? @product.color1 : "none" %>"></div>
+            <div class="box color-<%= @product.color2? ? @product.color2 : "none" %>"></div>
+            <div class="box color-<%= @product.color3? ? @product.color3 : "none" %>"></div>
+            <div class="box color-<%= @product.color4? ? @product.color4 : "none" %>"></div>
+          </div>
+          <div class="product-specs">
+            <ul>
+              <li><%= @product.category %></li>
+              <li><%= @product.cylinder %> cc</li>
+              <li><%= @product.engine %>-cooled</li>
+            </ul>
+          </div>
+          <div class="product-links">
+            <ul>
+              <li><%= link_to content_tag(:span, "", class: "glyphicon glyphicon-list-alt") %></li>
+              <li><%= link_to content_tag(:span, "", class: "glyphicon glyphicon-download-alt") %></li>
+            </ul>
+          </div>
+        </div>
+        <%= link_to("Ask for Test Ride", "#" , class: "btn btn-primary") %>
+      </div>
     </div>
 
   </div>

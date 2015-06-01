@@ -6,8 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Product.create(name: "CB Shine", picture: "cbshine.jpg", category: "Motorcycle", cylinder: 125, engine: "Air", color1: "black", color2: "gray", color3: "brown", color4: "red")
-Product.create(name: "CBF Stunner", picture: "cbfstunner.jpg", category: "Motorcycle", cylinder: 125, engine: "Air", color1: "red", color2: "yellow", color3: "green", color4: "black")
+Product.create(name: "CB Shine", picture: "cbshine.jpg", category: "Motorcycle", cylinder: 125, engine: "Air", color1: "black", color2: "gray", color3: "brown", color4: "red", image1: "shine-1.png", image2: "shine-2.jpg", image3: "shine-3.jpg", image4: "shine-4.jpg", thumb1: "shine-thumb-1", thumb2: "shine-thumb-2", thumb3: "shine-thumb-3", thumb4: "shine-thumb-4")
+Product.create(name: "CBF Stunner", picture: "cbfstunner.jpg", category: "Motorcycle", cylinder: 125, engine: "Air", color1: "red", color2: "yellow", color3: "green", color4: "black", image1: "stunner-1.png", image2: "stunner-2.jpg", image3: "stunner-3.jpg", image4: "stunner-4.jpg", thumb1: "stunner-thumb-1", thumb2: "stunner-thumb-2", thumb3: "stunner-thumb-3", thumb4: "stunner-thumb-4")
 Product.create(name: "CB Trigger", picture: "cbtrigger.jpg", category: "Motorcycle", cylinder: 150, engine: "Air", color1: "black", color2: "green", color3: "white", color4: "red")
 Product.create(name: "CB Twister", picture: "cbtwister.jpg", category: "Motorcycle", cylinder: 110, engine: "Air", color1: "gray", color2: "black", color3: "yellow", color4: "red")
 Product.create(name: "CBR 150R", picture: "cbr150r.jpg", category: "Motorcycle", cylinder: 150, engine: "Liquid", color1: "orange", color2: "green", color3: "white", color4: "red")
